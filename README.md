@@ -1,4 +1,4 @@
-# Vault AWS auth engine demo
+# Vault AWS auth demo
 
 Original project: [Vault Agent with AWS](https://learn.hashicorp.com/vault/identity-access-management/vault-agent-aws)
 
