@@ -216,7 +216,7 @@ vault write auth/aws/role/dev-role-iam auth_type=iam bound_iam_principal_arn="ar
 このスクリプトでは、VaultのK/Vシークレットエンジンをマウントし、`secret/myapp/config`にシークレット情報を書き込んでいます。そして、そのシークレットにだけアクセス可能な**policy**を作成します。
 さらに、AWS auth methodの認証も設定しています。Vault上に`dev-role-iam`というRoleを作成し、ここで指定したIAMロールのClientに対して、作成した`myapp`というpolicyを付与します。
 
-このデモでは、Vault sercerに紐付けられたIAMロール（この例では、_*arn:aws:iam::753278538983:role/masa-vault-auth-vault-client-role*)を用いてAWS auth methodを設定しています。もし別のIAMロールやIAMユーザーの権限で認証を行いたい場合は、以下のように個別に設定することも可能です。
+このデモでは、Vault serverに紐付けられたIAMロール（この例では、_*arn:aws:iam::753278538983:role/masa-vault-auth-vault-client-role*)を用いてAWS auth methodを設定しています。もし別のIAMロールやIAMユーザーの権限で認証を行いたい場合は、以下のように個別に設定することも可能です。
 
 ```console
 $ vault write auth/aws/config/client secret_key=vCtSM8ZUEQ3mOFVlYPBQkf2sO6F/W7a5TVzrl3Oj access_key=VKIAJBRHKH6EVTTNXDHA
