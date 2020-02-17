@@ -15,6 +15,9 @@ For example:
 
 Vault Client IAM Role ARN: ${aws_iam_role.vault-client.arn}
 
+To access vault server from your local machine, run:
+  export VAULT_ADDR="http://${aws_instance.vault-server[0].public_ip}:8200"
+
 EOF
 
 }
